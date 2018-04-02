@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MPPL UMKM</string>
+    <string name="home">Beranda</string>
+    <string name="checkout_name">Checkout</string>
+
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_user">Akun</string>
+</resources>

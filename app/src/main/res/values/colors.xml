@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fd8190</color>
+    <color name="colorPrimaryDark">#f27080</color>
+    <color name="colorPrimaryLight">#f27080</color>
+    <!--<color name="colorPrimaryDark">#9e9b8e</color>-->
+    <color name="colorAccent">#FA6476</color>
+    <color name="colorAccentPress">#0890a3</color>
+    <color name="colorSecondary">#FA6476</color>
+    <color name="colorSecondaryPress">#de5969</color>
+    <color name="colorGreen">#37ffa8</color>
+
+    <!--ADD ON COLOR-->
+    <color name="title">#fd8190</color>
+    <color name="colorPrimaryPress">#f27080</color>
+    <color name="favorite">#f27080</color>
+    <color name="star">#ffd20c</color>
+    <color name="star_border">#ffe078</color>
+    <color name="colorPrimaryDarkPress">#e9a68a</color>
+    <color name="white">#ffffff</color>
+    <color name="light_white">#f5f5f5</color>
+    <color name="white_transparent">#6ef4f4f4</color>
+    <color name="grey">#d9d9d9</color>
+    <color name="black_tranparent">#6b000000</color>
+    <color name="darkGrey">#b8b8b8</color>
+    <color name="light_grey">#9e9e9e</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#363636</color>
+    <color name="transparent">#10000000</color>
+    <color name="litle_transparent">#80000000</color>
+    <color name="line_transparent">#51ffffff</color>
+    <color name="transparent_100">#00000000</color>
+</resources>

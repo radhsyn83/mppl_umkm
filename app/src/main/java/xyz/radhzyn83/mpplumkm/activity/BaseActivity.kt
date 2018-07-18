@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar
 import android.view.View
 
 import xyz.radhzyn83.mpplumkm.R
+import xyz.radhzyn83.mpplumkm.utils.SessionManager
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -22,14 +23,18 @@ abstract class BaseActivity : AppCompatActivity() {
     private val visibleItemCount: Int = 0
     private val totalItemCount: Int = 0
     private var mToolbar: Toolbar? = null
+    public var sm: SessionManager? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(setLayoutResource())
         setToolBar(setToolBar(), setToolBarTitle())
 
-        onViewReady(this, savedInstanceState)
+        sm = SessionManager(this)
+        sm!!.checkLogin()
 
+        onViewReady(this, savedInstanceState)
     }
 
     protected abstract fun setLayoutResource(): Int
@@ -52,23 +57,5 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     protected abstract fun onViewReady(context: Context, savedInstanceState: Bundle?)
-
-    internal fun toolbarBackDrawable() {
-        val upArrow = ContextCompat.getDrawable(this, R.drawable.abc_ic_ab_back_material)
-        upArrow!!.setColorFilter(ContextCompat.getColor(this, android.R.color.white), PorterDuff.Mode.SRC_ATOP)
-        supportActionBar!!.setHomeAsUpIndicator(upArrow)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-    }
-
-    internal fun toolbarBackPressed(toolbar: Toolbar) {
-        toolbar.setNavigationOnClickListener { onBackPressed() }
-    }
-
-    protected fun setSwipeRefreshColor(swipeRefreshLayout: SwipeRefreshLayout) {
-        swipeRefreshLayout.setColorSchemeResources(R.color.colorAccent,
-                R.color.colorPrimaryLight,
-                R.color.colorPrimary,
-                R.color.colorPrimaryDark)
-    }
 
 }

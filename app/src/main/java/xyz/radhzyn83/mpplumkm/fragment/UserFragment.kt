@@ -6,6 +6,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.jcodecraeer.xrecyclerview.XRecyclerView
 import xyz.radhzyn83.mpplumkm.R
+import xyz.radhzyn83.mpplumkm.utils.SessionManager
 
 class UserFragment : RecyclerFragment() {
 
@@ -13,6 +14,8 @@ class UserFragment : RecyclerFragment() {
     private var start: Int = 0
     private var search_null: LinearLayout? = null
     private var error_title: TextView? = null
+    private var btn_logout: Button? = null
+    private var sm: SessionManager? = null
 
     companion object {
         fun newInstance(): UserFragment {
@@ -30,10 +33,17 @@ class UserFragment : RecyclerFragment() {
     }
 
     override fun onViewReady(view: View) {
-
+        sm = SessionManager(activity!!)
         search_null =  view.findViewById(R.id.search_null)
         error_title =  view.findViewById(R.id.error_title)
+        btn_logout =  view.findViewById(R.id.btn_logout)
+        btn_logout!!.setOnClickListener{view->
+            sm!!.logout()
+            sm!!.checkLogin()
+        }
+
         getData(start)
+
     }
 
     override fun onPullRefresh() {

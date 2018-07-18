@@ -1,6 +1,7 @@
 package xyz.radhzyn83.mpplumkm.fragment
 
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -78,7 +79,7 @@ class HomeFragment : RecyclerFragment(), ProdukView {
                 } else {
                     val adapter = ProdukAdapter(activity!!,res.produk)
                     xRecyclerView!!.refreshComplete();
-                    xRecyclerView!!.layoutManager = LinearLayoutManager(activity!!.applicationContext, LinearLayout.VERTICAL, false)
+                    xRecyclerView!!.layoutManager = LinearLayoutManager(activity!!.applicationContext, LinearLayout.VERTICAL, false) as RecyclerView.LayoutManager?
                     xRecyclerView!!.adapter = adapter
                 }
             } else {

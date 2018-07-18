@@ -6,4 +6,26 @@
     <string name="title_home">Beranda</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_user">Akun</string>
+
+    <!--DAFTAR / LOGIN -->
+    <string name="email">Email</string>
+    <string name="passowrd">Password</string>
+    <string name="login">Masuk</string>
+    <string name="show_pwd">Lihat Password</string>
+    <string name="hide_pwd">Sebunyikan Password</string>
+    <string name="forgot">Lupa password?</string>
+    <string name="closebutton">Close Button for Activity</string>
+    <string name="newUser">Belum jadi member?</string>
+    <string name="fullName">Nama Lengkap</string>
+    <string name="mobileNumber">Handphone</string>
+    <string name="location">Location</string>
+    <string name="confirmPassword">Ulangi Password</string>
+    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp">DAFTAR</string>
+    <string name="reload">Reload</string>
+    <string name="already_user">Sudah punya akun? Login disini.</string>
+    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="back">BACK</string>
+    <string name="search_hint">Cari...</string>
 </resources>

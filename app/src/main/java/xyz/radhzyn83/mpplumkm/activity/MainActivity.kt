@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.startActivity
 import xyz.radhzyn83.mpplumkm.R
 import xyz.radhzyn83.mpplumkm.adapter.ViewPagerAdapter
 import xyz.radhzyn83.mpplumkm.fragment.DashboardFragment
@@ -22,9 +24,6 @@ class MainActivity : BaseActivity() {
     private var f_user: Fragment = UserFragment()
 
     private var mViewPagerAdapter: ViewPagerAdapter? = null
-    private var prevMenuItem: MenuItem? = null
-    private var mItemCart: MenuItem? = null
-    private var mItemNotificatiom: MenuItem? = null
 
     override fun setLayoutResource(): Int {
         return R.layout.activity_main
@@ -40,10 +39,17 @@ class MainActivity : BaseActivity() {
 
     override fun onViewReady(context: Context, savedInstanceState: Bundle?) {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        setupViewPager(viewpager)
+        if ( sm!!.login()!! ) {
+            setupViewPager(viewpager)
+            val limit = if (mViewPagerAdapter!!.getCount() > 1) mViewPagerAdapter!!.getCount() - 1 else 1
+            viewpager.setOffscreenPageLimit(limit)
+        }
 
-        val limit = if (mViewPagerAdapter!!.getCount() > 1) mViewPagerAdapter!!.getCount() - 1 else 1
-        viewpager.setOffscreenPageLimit(limit)
+        search_btn.setOnClickListener {
+            startActivity<SearchActivity>()
+        }
+
+
     }
 
     private fun setupViewPager(viewPager: ViewPager) {

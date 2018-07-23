@@ -86,27 +86,6 @@
                     android:textStyle="bold"
                     android:ellipsize="end"/>
             </LinearLayout>
-            <LinearLayout
-                android:layout_gravity="end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:padding="3dp"
-                    android:layout_width="46dp"
-                    android:layout_height="46dp"
-                    android:src="@drawable/viber"/>
-                <ImageView
-                    android:padding="3dp"
-                    android:layout_width="46dp"
-                    android:layout_height="46dp"
-                    android:src="@drawable/whatsapp"/>
-                <ImageView
-                    android:padding="2dp"
-                    android:layout_width="46dp"
-                    android:layout_height="46dp"
-                    android:src="@drawable/line"/>
-            </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="6dp"

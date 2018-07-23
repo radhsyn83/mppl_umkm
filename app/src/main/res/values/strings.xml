@@ -28,4 +28,9 @@
     <string name="submit">SUBMIT</string>
     <string name="back">BACK</string>
     <string name="search_hint">Cari...</string>
+
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="simpan">Simpan</string>
 </resources>

@@ -51,16 +51,4 @@ class Const{
 
     //Fragments Tags
     fun Login_Fragment() = "LoginFragment"
-    fun SignUp_Fragment() = "RegisterFragment"
-    fun ForgotPassword_Fragment() = "ForgotPasswordFragment"
-    fun Home_Fragment() = "HomeFragment"
-    fun Favorit_Fragment() = "FavoritFragment"
-    fun Transaksi_Fragment() = "TransaksiFragment"
-    fun Notif_Fragment() = "NotifFragment"
-    fun Akun_Fragment() = "AkunFragment"
-    fun Pengiriman_Fragment() = "PengirimanFragment"
-    fun Pembelian_Fragment() = "PembelianFragment"
-    fun Finish_Fragment() = "FinishFragment"
-    fun Search_recent_fragment() = "SearchRecentFragment"
-    fun Search_result_fragment() = "SearchResultFragment"
 }

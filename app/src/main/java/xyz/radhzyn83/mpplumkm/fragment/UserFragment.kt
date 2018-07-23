@@ -7,13 +7,14 @@ import android.widget.TextView
 import com.jcodecraeer.xrecyclerview.XRecyclerView
 import xyz.radhzyn83.mpplumkm.R
 import xyz.radhzyn83.mpplumkm.utils.SessionManager
+import xyz.radhzyn83.mpplumkm.utils.SupportVariabel
 
 class UserFragment : RecyclerFragment() {
 
+    private var tv_nama: TextView? = null
+    private var tv_email: TextView? = null
     private var xRecyclerView: XRecyclerView? = null
     private var start: Int = 0
-    private var search_null: LinearLayout? = null
-    private var error_title: TextView? = null
     private var btn_logout: Button? = null
     private var sm: SessionManager? = null
 
@@ -34,8 +35,12 @@ class UserFragment : RecyclerFragment() {
 
     override fun onViewReady(view: View) {
         sm = SessionManager(activity!!)
-        search_null =  view.findViewById(R.id.search_null)
-        error_title =  view.findViewById(R.id.error_title)
+        tv_email = view.findViewById(R.id.tv_email)
+        tv_nama = view.findViewById(R.id.tv_nama)
+
+        tv_email!!.setText(SupportVariabel(activity!!).getEmail_user())
+        tv_nama!!.setText(SupportVariabel(activity!!).getName_user())
+
         btn_logout =  view.findViewById(R.id.btn_logout)
         btn_logout!!.setOnClickListener{view->
             sm!!.logout()

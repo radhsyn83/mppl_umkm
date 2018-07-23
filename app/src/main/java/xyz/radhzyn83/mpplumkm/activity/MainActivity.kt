@@ -48,8 +48,6 @@ class MainActivity : BaseActivity() {
         search_btn.setOnClickListener {
             startActivity<SearchActivity>()
         }
-
-
     }
 
     private fun setupViewPager(viewPager: ViewPager) {

@@ -127,7 +127,7 @@ class DetailActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        val url = "https://api.whatsapp.com/send?phone="+ no_hp +"&text="+ text_order
+        val url = "https://api.whatsapp.com/send?phone=6282272605775&text=$text_order"
         val i = Intent(Intent.ACTION_VIEW)
         i.data = Uri.parse(url)
         startActivity(i)
